@@ -1,0 +1,7 @@
+[client]
+user = mysql
+password = mysql 
+
+[mysqldump]
+user = mysql
+password = mysql 
