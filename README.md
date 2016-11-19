@@ -1,6 +1,6 @@
 # kdialog-web-project-creator
 
-This bash script ask you couple of questions (domain name, framework, database name, etc..) then create project, db and install choosen framework according to your configuration.
+This bash script will ask you couple of questions (domain name, framework, database name, etc..) then create project, db and install choosen framework according to your configuration.
 
 1) To use this script you should install kdialog, ex:
 ```
