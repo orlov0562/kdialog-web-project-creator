@@ -7,8 +7,11 @@ This bash script will ask you couple of questions (domain name, framework, datab
 sudo apt install kde-baseapps-bin
 ```
 2) Set your pathes at the header of create.sh
+
 3) Modify pathes to the vhosts files into conf-template.php. Modify apache configuration according to your requirements.
+
 4) Set DB credentials into mysql.conf
+
 5) Run create.sh
 
 Files description:
