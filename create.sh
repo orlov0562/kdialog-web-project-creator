@@ -5,6 +5,8 @@ SITE_DIR="/work/progr/webamp/sites"
 CONF_DIR="/work/progr/webamp/conf"
 HOSTS_FILE="/etc/hosts"
 
+command -v kdialog >/dev/null 2>&1 || { echo "I require 'kdialog' but it's not installed. Aborting." >&2; exit 1; }
+
 CONFIRM=""
 
 DOMAIN=`kdialog --title "Domain" --inputbox "Please enter domain:" "domain.sv"` 
