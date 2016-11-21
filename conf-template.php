@@ -11,39 +11,39 @@
         echo "Empty domain name".PHP_EOL;
         die(1);
     }
-    
+
     $domainDir = $siteDir.'/'.$domain;
     $webDir = $siteDir.'/'.$domain.'/public_html';
-    
-    if ($framework == 'yii') {
+
+    if ($framework == 'yii2') {
         $webDir .= '/web';
     }
 ?>
 
 <VirtualHost *:80>
-    ServerName <?=$domain?> 
-    ServerAlias www.<?=$domain?> 
-    ServerAdmin webmaster@<?=$domain?> 
 
-    DocumentRoot <?=$webDir?> 
-    
+    ServerName <?=$domain?><?=PHP_EOL?>
+    ServerAlias www.<?=$domain?><?=PHP_EOL?>
+    ServerAdmin webmaster@<?=$domain?><?=PHP_EOL?>
+    DocumentRoot <?=$webDir?><?=PHP_EOL?>
+
     <Directory "<?=$webDir?>">
         AllowOverride All
         Options FollowSymLinks
         Require all granted
 <?php if ($mod_rewrite):?>
-        
+        <?=PHP_EOL?>
         RewriteEngine on
         RewriteCond %{REQUEST_FILENAME} !-f
         RewriteCond %{REQUEST_FILENAME} !-d
-        RewriteRule . index.php 
+        RewriteRule . index.php
 <?php endif;?>
-
+        <?=PHP_EOL?>
         DirectoryIndex index.php index.html
     </Directory>
 
     <IfModule mpm_itk_module>
-        AssignUserId <?=$mpmUser?> <?=$mpmGroup?> 
+        AssignUserId <?=$mpmUser?> <?=$mpmGroup?><?=PHP_EOL?>
     </IfModule>
 
     php_admin_value open_basedir "<?=$domainDir?>/public_html:<?=$domainDir?>/tmp:/tmp"
