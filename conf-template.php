@@ -47,8 +47,8 @@
     </IfModule>
 
     php_admin_value open_basedir "<?=$domainDir?>/public_html:<?=$domainDir?>/tmp:/tmp"
-    php_value upload_tmp_dir "<?=$domainDir?>"
-    php_value session.save_path "<?=$domainDir?>"
+    php_value upload_tmp_dir "<?=$domainDir?>/tmp"
+    php_value session.save_path "<?=$domainDir?>/tmp"
 
     php_flag display_startup_errors on
     php_flag display_errors on
