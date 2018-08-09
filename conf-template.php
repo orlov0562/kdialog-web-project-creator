@@ -15,7 +15,11 @@
     $domainDir = $siteDir.'/'.$domain;
     $webDir = $siteDir.'/'.$domain.'/public_html';
 
-    if ($framework == 'yii2') {
+    if ($framework == 'yii2my') {
+        $webDir .= '/web';
+    }
+
+    if ($framework == 'yii2basic') {
         $webDir .= '/web';
     }
 ?>
